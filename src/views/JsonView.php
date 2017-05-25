@@ -1,12 +1,21 @@
 <?php
 
 /**
- * Created by PhpStorm.
- * User: Maurits
- * Date: 25-5-2017
- * Time: 13:25
+ * @author Maurits Seelen (25/05/2017)
+ * Class JsonView
  */
-class JsonView
+class JsonView implements View
 {
+    public function show(array $data)
+    {
+        header('Content-Type: application/json');
 
+        if (isset($data['toShow']))
+        {
+            $event = $data['toShow'];
+            echo json_encode($event);
+        } else {
+            echo '{No Data Found.}';
+        }
+    }
 }

@@ -1,0 +1,51 @@
+{
+  "name": "rudymas/easymvc",
+  "description": "Easy MVC PHP Framework",
+  "type": "project",
+  "keywords": [
+    "MVC",
+    "Framework",
+    "PHP"
+  ],
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Rudy Mas",
+      "email": "rudy.mas@rmssoft.be",
+      "homepage": "http://www.rmsoft.be",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "support@rmsoft.be",
+    "source": "https://github.com/RudyMas/easymvc"
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^7.0",
+    "rudymas/pdo-ext": "*",
+    "rudymas/router": "*",
+    "rudymas/html5": "*",
+    "rudymas/xml_json": "*",
+    "rudymas/manipulator": "*",
+    "rudymas/filemanager": "*",
+    "twig/twig": "*",
+    "guzzlehttp/guzzle": "*",
+    "nette/mail": "^2",
+    "latte/latte": "^2",
+    "phpoffice/phpword": "v0.13.*",
+    "linkedinapi/linkedin": "1.1.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Model\\": "src/models",
+      "Controller\\": "src/controllers",
+      "View\\": "src/views",
+      "Library\\": "libraries",
+      "Test\\": "tests"
+    }
+  }
+}
