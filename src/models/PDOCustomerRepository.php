@@ -69,4 +69,20 @@ class PDOCustomerRepository implements CustomerRepository
             print($PDOException);
         }
     }
+
+    /**
+     * @author Maurits Seelen (25/05/2017)
+     * @param int $customerId
+     */
+    public function deleteCustomer(int $customerId)
+    {
+        try {
+            $id = $customerId;
+            $statement = $this->connection->prepare('DELETE FROM Customers WHERE Id=?');
+            $statement->bindParam(1, $id, PDO::PARAM_INT);
+            $statement->execute();
+        } catch (\PDOException $exception) {
+            print($exception);
+        }
+    }
 }

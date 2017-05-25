@@ -1,6 +1,9 @@
 <?php
 
+namespace controllers;
+
 use models\PDOCustomerRepository;
+
 
 /**
  * @author Maurits Seelen (25/05/2017)
@@ -33,5 +36,10 @@ class CustomerController
     {
         $customers = $this->customerRepository->findAllCustomers();
         $this->view->show(['toShow' => $customers]);
+    }
+
+    public function handleDeleteCustomer($id)
+    {
+        $this->customerRepository->deleteCustomer($id);
     }
 }

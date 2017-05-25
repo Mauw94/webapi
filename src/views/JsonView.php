@@ -1,5 +1,6 @@
 <?php
 
+namespace views;
 /**
  * @author Maurits Seelen (25/05/2017)
  * Class JsonView
