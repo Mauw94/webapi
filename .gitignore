@@ -1,0 +1,10 @@
+# PHPstorm
+.idea/
+
+# Managed by Composer
+vendor/
+composer.lock
+composer.phar
+
+# Managed by npm
+node_modules/
